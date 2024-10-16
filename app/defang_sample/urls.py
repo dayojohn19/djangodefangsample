@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('todos/', include('example_app.urls', namespace='example_app')),
     path('', RedirectView.as_view(url='/todos/')),
+    path('api/', include('restapi.urls'))
 ]

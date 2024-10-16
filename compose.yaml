@@ -13,4 +13,4 @@ services:
     #deploy:
     #  resources:
     #    reservations:
-    #      memory: 256M
+    #      memory: 256M`
