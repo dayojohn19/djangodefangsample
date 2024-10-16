@@ -21,6 +21,7 @@ Django==4.2.16
 django-cors-headers==3.13.0
 django-embed-video==1.4.8
 django-extensions==3.2.3
+django-filter==24.3
 django-resized==1.0.2
 djangorestframework==3.15.2
 dnspython==2.2.1
@@ -116,11 +117,3 @@ websocket-client==1.4.2
 whitenoise==6.2.0
 widgetsnbextension==4.0.3
 zipp==3.11.0
-
-
-asgiref==3.8.1
-Django==5.0.4
-gunicorn==22.0.0
-packaging==24.0
-sqlparse==0.5.0
-whitenoise==6.6.0
