@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'example_app',
     'rest_framework',
-    'restapi'
+    'restapi',
+    'djongo'
 ]
 
 MIDDLEWARE = [
@@ -80,14 +81,25 @@ WSGI_APPLICATION = 'defang_sample.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+# Default Database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'resortsApis',
+        # 'ENFORCE_SCHEMA': True,
+        'CLIENT': {
+            'host': 'mongodb+srv://websiteprojects:nUihAXEQpGVJombK@cluster0.38ndv.mongodb.net/TreepDB?retryWrites=true&w=majority&ssl_cert_reqs=CERT_NONE'
+        }
+
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
